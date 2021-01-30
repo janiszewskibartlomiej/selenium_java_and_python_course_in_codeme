@@ -1,0 +1,33 @@
+09:02:21	 From Marek Konitz : http://the-internet.herokuapp.com/challenging_dom
+09:10:42	 From Marek Konitz : https://git-scm.com/download/win
+09:11:56	 From Marek Konitz : https://git-scm.com/download/win
+09:12:18	 From Bartłomiej Janiszewski : dsd
+09:13:40	 From Bartłomiej Janiszewski : https://git-scm.com/download/win
+09:22:44	 From Marta : ja mam
+09:23:55	 From Marta : jest
+09:25:53	 From dominika : Udao
+09:25:57	 From Magdalena : udało
+09:32:01	 From Bartłomiej Janiszewski : tak
+09:32:09	 From Marta : tak
+10:01:04	 From Ewelina Kozlowska : tak
+10:13:03	 From Marta : tak
+10:13:03	 From Magdalena : tak
+10:48:03	 From Marta : tak
+10:48:16	 From Marta : ls
+10:48:55	 From Magdalena : tak
+10:48:59	 From Marta : tak
+11:50:49	 From Magdalena : udało się
+12:13:57	 From dominika : Udało się
+12:14:10	 From Marek Grzelczak : ok
+12:38:34	 From dominika : Ja też nie
+12:46:09	 From dominika : Ja również
+13:36:33	 From Magdalena : \d*|\d*-\d*-\d*-\d*
+13:41:27	 From Magdalena : \d*\-\d*\-\d*\-\d*|\d{10} - to zaznaczyło wszytko
+13:41:31	 From Magdalena : 5 matchy
+13:42:32	 From Bartłomiej Janiszewski : nieststy 6   \d{9}|\d{2,3}\-\d{2,3}\-\d{2,3}\-\d{2,3}
+13:48:27	 From Marek Konitz : ^(\d{10}|\d{3}\-\d{3}\-\d{2}\-\d{2}|\d{2}\-\d{3}\-\d{3}\-\d{2}|\d{2}\-\d{2}\-\d{3}\-\d{3}|\d{2}\-\d{3}\-\d{2}\-\d{3})$
+14:03:20	 From Magdalena : Cos takiego (swoją srogą strasznie wygląda): [A-Z][a-ząśżźćęłóń]*\s[A-Z][a-ząśżźćęłóń]*\-[A-Z][a-ząśżźćęłóń][a-ząśżźćęłóń]*|[A-Z][a-ząśżźćęłóń]*\s[A-Z][a-ząśżźćęłóń]*$ ale dalej mi podkreśla tę babkę z cyfrą :(
+14:03:50	 From Bartłomiej Janiszewski : ni jest dobry do konca ^[A-Z][a-z]+\s+[A-Z][a-z]+(\-[A-Z][a-zą]+)?
+14:07:36	 From Kamila : (^([A-Z]\w*\ [A-Z]\w*)\-([A-Z]\w*))|(^([A-Z]\w*\ [A-Z]\w*)) ale tez łapie cyfrę na końcu :/
+14:08:12	 From Kamila : ^([A-Z]\w*\ [A-Z]\w*)\-([A-Z]\w*))|(^([A-Z]\w*\ [A-Z]\w*) - tak miało być  :)
+14:08:57	 From Bartłomiej Janiszewski : raczeej jest ok ^[A-Z][a-z]+ [A-Z][a-z]+(\-[A-Z][a-zą]+)?$

@@ -1,0 +1,42 @@
+plugins {
+    id 'java'
+}
+
+group 'pl.codeme'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-engine', version: '5.0.0'
+    testImplementation group: 'org.junit.jupiter', name: 'junit-jupiter-api', version: '5.0.0'
+    testImplementation 'io.cucumber:cucumber-java:6.8.1'
+    testImplementation 'io.cucumber:cucumber-junit-platform-engine:6.8.1'
+    implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+configurations {
+    cucumberRuntime {
+        extendsFrom testImplementation
+    }
+}
+
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            environment 'NO_NOT_IMPLEMENTED_EXCEPTION_BDD', project.ext.NO_NOT_IMPLEMENTED_EXCEPTION_BDD
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'com.amberum', 'src/test/resources/features']
+        }
+    }
+}
+
+ext.NO_NOT_IMPLEMENTED_EXCEPTION_BDD = "true"
